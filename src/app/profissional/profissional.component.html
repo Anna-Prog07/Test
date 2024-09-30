@@ -1,0 +1,25 @@
+<h2>Gerenciar Profissionais</h2>
+
+<form (ngSubmit)="addProfissional()">
+  <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input [(ngModel)]="newProfissional.Nome" name="nome" placeholder="Nome" required class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input [(ngModel)]="newProfissional.Email" name="email" placeholder="Email" required class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="cargo">Cargo:</label>
+    <input [(ngModel)]="newProfissional.Cargo" name="cargo" placeholder="Cargo" required class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Adicionar Profissional</button>
+</form>
+
+<ul class="list-group">
+  <li *ngFor="let profissional of profissionais; let i = index" class="list-group-item">
+    {{ profissional.Nome }} - {{ profissional.Email }} - {{ profissional.Cargo }}
+    <button (click)="editProfissional(i)" class="btn btn-sm btn-primary">Editar</button>
+    <button (click)="deleteProfissional(i)" class="btn btn-sm btn-danger">Remover</button>
+  </li>
+</ul>

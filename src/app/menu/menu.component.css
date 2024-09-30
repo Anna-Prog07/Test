@@ -1,0 +1,32 @@
+.navbar {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  
+  .nav-link {
+    color: #337ab7;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #23527c;
+  }
+  
+  .nav-link.active {
+    color: #337ab7;
+  }
+  
+  .btn-outline-danger {
+    margin-left: 20px;
+  }

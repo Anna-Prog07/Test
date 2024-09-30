@@ -1,0 +1,16 @@
+<h2>Gerenciar Alunos</h2>
+    <form (ngSubmit)="addAluno()">
+      <input [(ngModel)]="newAluno.Nome" name="nome" placeholder="Nome" required />
+      <input [(ngModel)]="newAluno.Email" name="email" placeholder="Email" required />
+      <input [(ngModel)]="newAluno.DataNascimento" name="dataNascimento" placeholder="Data Nascimento" required />
+      <input [(ngModel)]="newAluno.Sexo" name="sexo" placeholder="Sexo" required />
+      <button type="submit">Adicionar Aluno</button>
+    </form>
+
+    <ul>
+      <li *ngFor="let aluno of alunos; let i = index">
+        {{ aluno.Nome }} - {{ aluno.Email }}
+        <button (click)="editAluno(i)">Editar</button>
+        <button (click)="deleteAluno(i)">Remover</button>
+      </li>
+    </ul>
